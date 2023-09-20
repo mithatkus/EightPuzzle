@@ -1,0 +1,44 @@
+Name: Alim Cemal Kura
+E-mail: ackura@bu.edu
+
+Partner's name: Mithat Kus
+Partner's e-mail: mthtks@bu.edu
+
+
+puzzles with 5-move optimal solutions
+-------------------------------------
+algorithm                num. solved    avg. moves    avg. states tested
+------------------------------------------------------------------------
+random			10		5.0		74.2
+BFS			10		5.0		47.1
+DFS (depth limit 20)	10		16.2		19072.7
+DFS (depth limit 50)	10		48.2		49043.0
+Greedy Search (using h1) 	10		5.4		70.3
+A* (using h1)		10		5.0		6.5
+
+
+puzzles with 10-move optimal solutions
+-------------------------------------
+algorithm                num. solved    avg. moves    avg. states tested
+------------------------------------------------------------------------
+random			9		12.9		3660.4
+BFS			10		10.0		747.4				
+DFS (depth limit 20)	10		18.8		24858.0
+DFS (depth limit 50)	10		49.2		92287.3	
+Greedy Search (using h1) 	10		97.6		7422.7
+A* (using h1)		10		10.0		27.3
+
+ 
+puzzles with 15-move optimal solutions
+-------------------------------------
+algorithm                num. solved    avg. moves    avg. states tested
+------------------------------------------------------------------------
+random			10		18.4		20791.7
+BFS			10		15.0		12672.0
+DFS (depth limit 20)	10		17.8		68659.0
+DFS (depth limit 50)	10		48.6		111406.0
+Greedy Search (using h1) 	8		132.35		16077.75
+A* (using h1)		10		15.0		313.8
+
+
+As seen by the results above, it may take a lot of time and moves to solve a specific 8-puzzle. From our results, we conclude that the least effective way to solve a puzzle is using the DFS algorithm because once the searcher is stuck in a particular path, it is difficult to come back and find a more efficient one. Another algorithm available is BFS, which stores every state in memory. Although it finds the optimal route, it is not an effective way to solve puzzles requiring a relatively large number of moves. The last uninformed method is random. As expected, choosing your moves at random is highly worthless and wastes a lot of time. On the other hand, there are also two informed algorithms. Thanks to heuristic functions, which calculate the number of misplaced integers, these algorithms are able to prioritize promising routes. However, the Greedy Searcher does not take into account the cost of coming to that state. That is why the most effective one is the A* algorithm. 
